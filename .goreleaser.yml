@@ -20,7 +20,13 @@ builds:
 
 - id: linux
   goos: [linux]
-  goarch: [amd64]
+  goarch:
+    - amd64
+    - arm
+    - arm64
+  goarm:
+    - 6
+    - 7
   # Make sure that cgo is disabled. See: https://golang.org/cmd/cgo/
   env:
     - CGO_ENABLED=0
